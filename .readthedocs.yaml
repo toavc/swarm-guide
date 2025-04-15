@@ -1,0 +1,36 @@
+# .readthedocs.yaml
+
+version: 2
+
+# Specify the OS and build tools
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.11" # Or another suitable version
+
+  # Add custom build steps
+  jobs:
+    post_build:
+      # These commands will run AFTER the standard Sphinx build.
+
+      # Copy EACH required static file EXPLICITLY.
+      # The -f (force) flag ensures overwriting.
+      - echo "--- Copying static files ---"
+      - cp -rf _static_html/index.html $READTHEDOCS_OUTPUT/html/index.html
+      - cp -rf _static_html/style.css $READTHEDOCS_OUTPUT/html/style.css
+      # Note: If you add other files (JS, images, etc.) to _static_html,
+      # you will need to add corresponding 'cp -rf' commands here.
+
+# Tell Sphinx to use our minimal conf.py
+sphinx:
+  configuration: docs/conf.py
+
+# Specify how to install Python dependencies
+python:
+  install:
+    - requirements: requirements.txt
+
+# (Optional) Specify which formats to build
+formats:
+ - htmlzip
+ # - pdf

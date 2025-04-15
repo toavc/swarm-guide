@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Swarm Resource Hub</title>
+</head>
+<body>
+    <!-- Main container -->
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Swarm Hub</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#welcome">Welcome</a></li>
+                    <li><a href="#what-is-swarm">What is Swarm</a></li>
+                    <li><a href="#key-features">Key Features</a></li>
+                    <li><a href="#latest-resources">Latest Resources</a></li>
+                    <li><a href="#technical-documentation">Technical Docs</a></li>
+                    <li><a href="#architecture">Swarm Architecture</a></li>
+                    <li>
+                        <a href="#architecture-disc">DISC Model</a>
+                    </li>
+                    <li>
+                        <a href="#economic-model">Economic Model</a>
+                    </li>
+                    <li>
+                        <a href="#use-cases">Use Cases</a>
+                    </li>
+                    <li><a href="#development-updates">Development Updates</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>Updated: April 2025</p>
+            </div>
+        </aside>
+
+        <!-- Main content area -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1 id="welcome">Welcome to the Swarm Resource Hub!</h1>
+                <p class="subtitle">Your gateway to exploring Swarm's decentralized ecosystem</p>
+            </div>
+            
+            <section class="content-section" id="what-is-swarm">
+                <h2>What is Swarm?</h2>
+                <p>Swarm is a decentralized storage and communication platform built on the Ethereum blockchain. It serves as the "hard disk" of the world computer, providing a censorship-resistant, permissionless infrastructure for hosting and distributing decentralized applications and their data. By breaking files into 4KB chunks and distributing them across a network of nodes, Swarm ensures high availability, fault tolerance, and privacy while incentivizing participation through its native BZZ token.</p>
+            </section>
+
+            <section class="content-section" id="key-features">
+                <h2>Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Decentralized Storage</h3>
+                        <p>Data is split into small chunks and distributed across numerous nodes, eliminating single points of failure.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Content Addressing</h3>
+                        <p>Files are identified by unique hashes based on their content, ensuring data integrity.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>DDOS Resistance</h3>
+                        <p>The network becomes stronger against attacks with each additional node.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Privacy First</h3>
+                        <p>Cryptographic support enables zero-leak privacy through features like "single-owner chunks".</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Fault Tolerance</h3>
+                        <p>Redundant storage with local replication ensures data availability despite node dropouts.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Incentive System</h3>
+                        <p>Built-in economic model powered by the BZZ token rewards node operators for contributing resources.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" id="latest-resources">
+                <h2>Latest Resources (April 2025)</h2>
+                <div class="resource-list">
+                    <div class="resource-item">
+                        <h3><a href="https://www.globenewswire.com/news-release/2025/04/14/3060816/0/en/Swarm-Joins-Hivello-Marking-the-10th-DePIN-Network-Aggregated.html" target="_blank">Swarm Joins Hivello as 10th DePIN Network</a></h3>
+                        <p class="resource-date">April 14, 2025</p>
+                        <p>Announcement of Swarm joining Hivello, enabling users to monetize idle computer resources across multiple decentralized networks.</p>
+                    </div>
+                    <div class="resource-item">
+                        <h3><a href="https://hackernoon.com/ethereum-is-not-a-world-computer-and-swarm-is-much-more-than-just-a-hard-drive" target="_blank">Ethereum is Not a World Computer, and Swarm is Much More</a></h3>
+                        <p class="resource-date">February 24, 2025</p>
+                        <p>Analysis of how Swarm complements Ethereum by providing not just storage but also content delivery, messaging, and more.</p>
+                    </div>
+                    <div class="resource-item">
+                        <h3><a href="https://hackernoon.com/understanding-the-ethereum-swarm-storage-scaling-mechanism" target="_blank">Understanding Swarm Storage Scaling Mechanism</a></h3>
+                        <p class="resource-date">September 9, 2024</p>
+                        <p>Technical explanation of how Swarm optimizes storage through node neighborhoods and the "proximity principle".</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" id="technical-documentation">
+                <h2>Technical Documentation</h2>
+                <div class="doc-grid">
+                    <div class="doc-card">
+                        <h3><a href="https://www.ethswarm.org" target="_blank">Swarm Official Website</a></h3>
+                        <p>The main hub for Swarm information, featuring explanations of its fault-tolerance, privacy features, and mission as Web3 infrastructure.</p>
+                    </div>
+                    <div class="doc-card">
+                        <h3><a href="https://mainframe-swarm-guide.readthedocs.io/en/docs-overhaul/introduction.html" target="_blank">Swarm Technical Documentation</a></h3>
+                        <p>Comprehensive guide for developers explaining Swarm's architecture, implementation, and API usage.</p>
+                    </div>
+                    <div class="doc-card">
+                        <h3><a href="https://www.ethswarm.org/swarm-whitepaper.pdf" target="_blank">Swarm Whitepaper</a></h3>
+                        <p>The foundational document detailing Swarm's technical architecture, economic model, and vision for a self-sovereign digital society.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" id="architecture">
+                <h2>Understanding Swarm Architecture</h2>
+                
+                <div class="subsection" id="architecture-disc">
+                    <h3>DISC (Distributed Immutable Store of Chunks)</h3>
+                    <p>At Swarm's core is the DISC storage model, where:</p>
+                    <ul>
+                        <li>All data is split into 4KB chunks with unique addresses based on content hashes</li>
+                        <li>Nodes store chunks that are "close" to their own address in the address space</li>
+                        <li>Push-sync protocol distributes chunks to appropriate neighborhoods</li>
+                        <li>Pull-sync ensures redundancy by synchronizing storage between neighboring nodes</li>
+                    </ul>
+                </div>
+                
+                <div class="subsection" id="economic-model">
+                    <h3>Economic Model</h3>
+                    <p>Swarm's sustainability relies on its token-based incentive system:</p>
+                    <ul>
+                        <li><strong>BZZ Token</strong>: ERC20 token that powers all economic activity in the network</li>
+                        <li><strong>Storage Incentives</strong>: Nodes stake BZZ and receive rewards for storing and retrieving data</li>
+                        <li><strong>Price Predictions</strong>: According to analysts, BZZ minimum price could reach $0.13341047 by end of 2025</li>
+                    </ul>
+                </div>
+                
+                <div class="subsection" id="use-cases">
+                    <h3>Use Cases</h3>
+                    <p>Swarm enables a variety of decentralized applications:</p>
+                    <ul>
+                        <li><strong>Content Delivery Network</strong>: Functions as a crypto-incentivized CDN for efficient content distribution</li>
+                        <li><strong>File Storage</strong>: Persistent, censorship-resistant storage for dApp code and data</li>
+                        <li><strong>Communication Platform</strong>: Built-in messaging system replacing Ethereum's promised Whisper protocol</li>
+                        <li><strong>DePIN Infrastructure</strong>: Part of the growing Decentralized Physical Infrastructure Network ecosystem</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content-section" id="development-updates">
+                <h2>Development Updates</h2>
+                <p>The Swarm Foundation continues active development with recent improvements including:</p>
+                <ul>
+                    <li><strong>Bee Track Release 2.5 (March 2025)</strong>: Optimizations to pusher and pushsync protocol for improved upload/download efficiency</li>
+                    <li><strong>Storage Incentives Phase 4</strong>: Recently completed implementation of the full incentive system</li>
+                    <li><strong>New Localstore</strong>: Major update in Bee 1.17 improving code maintainability and feature development</li>
+                </ul>
+                <p>This hub serves as your gateway to exploring Swarm's ecosystem. Whether you're a developer looking to build decentralized applications or someone interested in contributing resources to earn BZZ tokens, these resources will help you navigate the world of decentralized storage.</p>
+            </section>
+
+            <section class="content-section citation-section">
+                <h2>Citations</h2>
+                <ol class="citations">
+                    <li><a href="https://coin360.com/glossary/swarm" target="_blank">https://coin360.com/glossary/swarm</a></li>
+                    <li><a href="https://mainframe-swarm-guide.readthedocs.io/en/docs-overhaul/introduction.html" target="_blank">https://mainframe-swarm-guide.readthedocs.io/en/docs-overhaul/introduction.html</a></li>
+                    <li><a href="https://www.bitcoinsuisse.com/news/what-is-swarm" target="_blank">https://www.bitcoinsuisse.com/news/what-is-swarm</a></li>
+                    <li><a href="https://www.ethswarm.org" target="_blank">https://www.ethswarm.org</a></li>
+                    <li><a href="https://hackernoon.com/ethereum-is-not-a-world-computer-and-swarm-is-much-more-than-just-a-hard-drive" target="_blank">https://hackernoon.com/ethereum-is-not-a-world-computer-and-swarm-is-much-more-than-just-a-hard-drive</a></li>
+                    <li><a href="https://3commas.io/predictions/swarm-bzz" target="_blank">https://3commas.io/predictions/swarm-bzz</a></li>
+                    <li><a href="https://web3edge.io/research/what-is-swarm/" target="_blank">https://web3edge.io/research/what-is-swarm/</a></li>
+                    <li><a href="https://www.globenewswire.com/news-release/2025/04/14/3060816/0/en/Swarm-Joins-Hivello-Marking-the-10th-DePIN-Network-Aggregated.html" target="_blank">https://www.globenewswire.com/news-release/2025/04/14/3060816/0/en/Swarm-Joins-Hivello-Marking-the-10th-DePIN-Network-Aggregated.html</a></li>
+                    <li><a href="https://hackernoon.com/understanding-the-ethereum-swarm-storage-scaling-mechanism" target="_blank">https://hackernoon.com/understanding-the-ethereum-swarm-storage-scaling-mechanism</a></li>
+                    <li><a href="https://www.ethswarm.org/swarm-whitepaper.pdf" target="_blank">https://www.ethswarm.org/swarm-whitepaper.pdf</a></li>
+                    <li><a href="https://blog.ethswarm.org/foundation/" target="_blank">https://blog.ethswarm.org/foundation/</a></li>
+                    <li><a href="https://www.globenewswire.com/news-release/2025/04/15/3061585/0/en/Swarm-joins-Hivello-for-new-reward-opportunities.html" target="_blank">https://www.globenewswire.com/news-release/2025/04/15/3061585/0/en/Swarm-joins-Hivello-for-new-reward-opportunities.html</a></li>
+                </ol>
+            </section>
+        </main>
+    </div>
+
+    <!-- Mobile navigation toggle button (visible only on small screens) -->
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Simple script for mobile navigation toggle -->
+    <script>
+        document.querySelector('.mobile-nav-toggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
