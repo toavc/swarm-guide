@@ -18,6 +18,7 @@ build:
       - echo "--- Copying static files ---"
       - cp -rf _static_html/index.html $READTHEDOCS_OUTPUT/html/index.html
       - cp -rf _static_html/style.css $READTHEDOCS_OUTPUT/html/style.css
+      - cp -rf _static_html/Swarmblack.svg $READTHEDOCS_OUTPUT/html/Swarmblack.svg # Added copy command for the logo
       # Note: If you add other files (JS, images, etc.) to _static_html,
       # you will need to add corresponding 'cp -rf' commands here.
 
