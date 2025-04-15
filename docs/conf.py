@@ -3,9 +3,9 @@ import os
 import sys
 
 # Minimal required Sphinx settings
-project = 'My Static Site' # Your project name
-copyright = '2025, Your Name'
-author = 'Your Name'
+project = 'Swarm Guide' # Your project name
+copyright = '2025'
+author = 'SWARM'
 
 # Required Sphinx stubs
 extensions = []

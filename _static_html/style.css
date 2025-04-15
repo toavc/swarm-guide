@@ -99,79 +99,136 @@ code, pre {
     border-right: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    position: sticky;
+    position: sticky; /* Keep sidebar visible on scroll */
     top: 0;
-    height: 100vh;
-    overflow-y: auto;
-    transition: transform 0.3s ease;
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable scroll if content overflows */
+    transition: transform 0.3s ease; /* For mobile slide-in */
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
 }
 
 .sidebar-header {
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding: var(--spacing-md); /* Adjusted padding */
     border-bottom: 1px solid var(--border-color);
+    text-align: center; /* Center the logo link */
 }
 
+.sidebar-brand-link {
+    display: inline-block; /* Allow centering */
+    padding: var(--spacing-sm) 0; /* Add some vertical padding */
+    text-decoration: none;
+}
+
+.sidebar-brand-link:hover {
+    text-decoration: none;
+}
+
+/* Style for the logo in the sidebar header */
+.sidebar-logo {
+    display: block;
+    height: 90px; /* Made logo larger again */
+    width: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Remove the H2 style as it's replaced by the logo */
+/*
 .sidebar-header h2 {
     font-size: 1.3rem;
     margin-bottom: 0;
+    color: var(--text-color);
 }
+*/
 
 .sidebar-nav {
-    flex-grow: 1;
-    padding: var(--spacing-md);
+    flex-grow: 1; /* Allow nav to take available space */
+    padding: var(--spacing-md) 0; /* Vertical padding, no horizontal */
 }
 
-.sidebar-nav ul {
+.sidebar-nav-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.sidebar-nav ul li {
-    margin-bottom: var(--spacing-xs);
-    border-radius: var(--border-radius);
-    transition: background-color 0.2s ease;
+.sidebar-nav-item {
+    margin-bottom: var(--spacing-xs); /* Consistent spacing */
 }
 
-.sidebar-nav ul li a {
+.sidebar-nav-link {
     display: block;
-    padding: var(--spacing-sm) var(--spacing-md);
-    color: var(--text-color);
+    padding: 0.6rem var(--spacing-lg); /* Increased padding */
+    margin: 0 var(--spacing-sm); /* Horizontal margin for spacing from edge */
+    color: var(--text-light); /* Slightly lighter text for links */
+    text-decoration: none;
     border-radius: var(--border-radius);
-    transition: all 0.2s ease;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    font-size: 0.95rem;
 }
 
-.sidebar-nav ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+.sidebar-nav-link:hover {
+    background-color: #e9ecef; /* Subtle hover background */
+    color: var(--text-color); /* Darken text on hover */
     text-decoration: none;
 }
 
-.sidebar-nav ul li.active a {
-    background-color: var(--sidebar-active);
-    color: var(--primary-color);
-    font-weight: 500;
+/* Active state styling */
+.sidebar-nav-item.active .sidebar-nav-link {
+    background-color: var(--primary-color); /* Use primary color for active bg */
+    color: #ffffff; /* White text for contrast */
+    font-weight: 500; /* Slightly bolder */
+}
+
+/* Styling for section headers within nav */
+.sidebar-nav-header {
+    font-weight: 600;
+    color: var(--text-muted);
+    padding: 0.75rem var(--spacing-lg) 0.25rem;
+    margin-top: var(--spacing-md); /* Space above header */
+    margin-left: var(--spacing-sm);
+    margin-right: var(--spacing-sm);
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Indentation for sub-items */
+.sidebar-nav-item.sub-item .sidebar-nav-link {
+    padding-left: calc(var(--spacing-lg) + var(--spacing-md)); /* Indent sub-items */
 }
 
 .sidebar-footer {
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md); /* More padding */
     border-top: 1px solid var(--border-color);
-    font-size: 0.85rem;
+}
+
+.sidebar-updated-text {
+    font-size: 0.8em;
     color: var(--text-muted);
+    text-align: center;
+    margin: 0;
 }
 
 /* ---------- Main Content ---------- */
 .main-content {
     flex-grow: 1;
     padding: var(--spacing-xl);
-    max-width: 100%;
+    max-width: calc(100% - var(--sidebar-width)); /* Adjust max-width considering sidebar */
     overflow-wrap: break-word;
+    width: 100%; /* Ensure it takes available width */
 }
+
+/* --- Styles for sections below remain largely the same --- */
+/* --- (Copying existing styles for brevity) --- */
 
 .content-header {
     margin-bottom: var(--spacing-xl);
     padding-bottom: var(--spacing-lg);
     border-bottom: 1px solid var(--border-color);
+    text-align: center; /* Keep content header centered */
 }
+
+/* Removed styles for .header-logo as it's moved */
 
 .content-header h1 {
     font-size: 2.2rem;
@@ -247,7 +304,7 @@ code, pre {
 
 /* ---------- Mobile Navigation Toggle ---------- */
 .mobile-nav-toggle {
-    display: none;
+    display: none; /* Hidden by default */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -257,10 +314,10 @@ code, pre {
     background-color: var(--primary-color);
     border: none;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 1001; /* Ensure it's above the sidebar */
     cursor: pointer;
+    /* Styles for the burger icon lines */
 }
-
 .mobile-nav-toggle span {
     display: block;
     width: 24px;
@@ -269,44 +326,47 @@ code, pre {
     margin: 5px auto;
     transition: all 0.3s ease;
 }
-
+/* Animation for the burger icon when active */
 .mobile-nav-toggle.active span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
 }
-
 .mobile-nav-toggle.active span:nth-child(2) {
     opacity: 0;
 }
-
 .mobile-nav-toggle.active span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
 }
 
+
 /* ---------- Responsive Design ---------- */
-@media (max-width: 768px) {
+@media (max-width: 992px) { /* Adjusted breakpoint for better tablet/mobile handling */
     .container {
         flex-direction: column;
+        max-width: 100%; /* Allow container to fill width */
     }
     
     .sidebar {
-        width: 100%;
-        transform: translateX(-100%);
-        position: fixed;
-        z-index: 100;
+        width: 280px; /* Fixed width when shown on mobile */
+        transform: translateX(-100%); /* Hidden off-screen */
+        position: fixed; /* Fixed position for overlay effect */
+        z-index: 1000; /* Ensure sidebar is above content */
         height: 100%;
+        border-right: none; /* Remove border for overlay */
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1); /* Add shadow for depth */
     }
     
     .sidebar.active {
-        transform: translateX(0);
+        transform: translateX(0); /* Slide in */
     }
     
     .main-content {
-        margin-left: 0;
-        padding: var(--spacing-md);
+        margin-left: 0; /* No margin when sidebar is hidden/overlay */
+        padding: var(--spacing-lg); /* Adjust padding */
+        max-width: 100%; /* Full width */
     }
     
     .mobile-nav-toggle {
-        display: block;
+        display: block; /* Show toggle button */
     }
     
     .content-header h1 {
@@ -314,21 +374,14 @@ code, pre {
     }
     
     .feature-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column on small screens */
     }
 }
 
-/* For tablets */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .sidebar {
-        width: 220px;
-    }
-    
+/* Keep sidebar visible on larger screens */
+@media (min-width: 993px) {
     .main-content {
-        padding: var(--spacing-lg);
-    }
-    
-    .feature-grid {
-        grid-template-columns: repeat(2, 1fr);
+         /* Ensure main content doesn't overlap with sticky sidebar */
+         /* max-width calculation is handled by flexbox */
     }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Swarm Resource Hub</title>
+    <title>Swarm Guide</title> <!-- Changed title -->
 </head>
 <body>
     <!-- Main container -->
@@ -12,37 +12,38 @@
         <!-- Sidebar navigation -->
         <aside class="sidebar">
             <div class="sidebar-header">
-                <h2>Swarm Hub</h2>
+                <a href="#welcome" class="sidebar-brand-link"> <!-- Make header clickable -->
+                    <img src="Swarmblack.svg" alt="Swarm Logo" class="sidebar-logo"> <!-- Replaced H2 with Logo -->
+                </a>
             </div>
             <nav class="sidebar-nav">
-                <ul>
-                    <li class="active"><a href="#welcome">Welcome</a></li>
-                    <li><a href="#what-is-swarm">What is Swarm</a></li>
-                    <li><a href="#key-features">Key Features</a></li>
-                    <li><a href="#latest-resources">Latest Resources</a></li>
-                    <li><a href="#technical-documentation">Technical Docs</a></li>
-                    <li><a href="#architecture">Swarm Architecture</a></li>
-                    <li>
-                        <a href="#architecture-disc">DISC Model</a>
-                    </li>
-                    <li>
-                        <a href="#economic-model">Economic Model</a>
-                    </li>
-                    <li>
-                        <a href="#use-cases">Use Cases</a>
-                    </li>
-                    <li><a href="#development-updates">Development Updates</a></li>
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item active"><a href="#welcome" class="sidebar-nav-link">Welcome</a></li>
+                    <li class="sidebar-nav-item"><a href="#what-is-swarm" class="sidebar-nav-link">What is Swarm</a></li>
+                    <li class="sidebar-nav-item"><a href="#key-features" class="sidebar-nav-link">Key Features</a></li>
+                    <li class="sidebar-nav-item"><a href="#latest-resources" class="sidebar-nav-link">Latest Resources</a></li>
+
+                    <!-- Grouping Technical Docs -->
+                    <li class="sidebar-nav-item sidebar-nav-header">Technical Docs</li>
+                    <li class="sidebar-nav-item sub-item"><a href="#architecture" class="sidebar-nav-link">Swarm Architecture</a></li>
+                    <li class="sidebar-nav-item sub-item"><a href="#architecture-disc" class="sidebar-nav-link">DISC Model</a></li>
+                    <li class="sidebar-nav-item sub-item"><a href="#economic-model" class="sidebar-nav-link">Economic Model</a></li>
+                    <li class="sidebar-nav-item sub-item"><a href="#use-cases" class="sidebar-nav-link">Use Cases</a></li>
+                    <!-- End Grouping -->
+
+                    <li class="sidebar-nav-item"><a href="#development-updates" class="sidebar-nav-link">Development Updates</a></li>
                 </ul>
             </nav>
             <div class="sidebar-footer">
-                <p>Updated: April 2025</p>
+                <p class="sidebar-updated-text">Updated: April 2025</p> <!-- Added class -->
             </div>
         </aside>
 
         <!-- Main content area -->
         <main class="main-content">
             <div class="content-header">
-                <h1 id="welcome">Welcome to the Swarm Resource Hub!</h1>
+                <!-- Removed logo from here -->
+                <h1 id="welcome">Welcome to the Swarm Guide!</h1> <!-- Changed H1 -->
                 <p class="subtitle">Your gateway to exploring Swarm's decentralized ecosystem</p>
             </div>
             
